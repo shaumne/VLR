@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-url = "https://www.vlr.gg/rankings/la-s"
+url = "https://www.vlr.gg/rankings/europe"
 
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
@@ -20,4 +20,4 @@ df = pd.DataFrame(links, columns=["url", "team_name"])
 # url prefixini ekleyerek url kolonunu düzenle
 df["url"] = "https://www.vlr.gg" + df["url"]
 
-df.to_excel("la-s_teams.xlsx", index=False)
+df.to_excel("eu_teams.xlsx", index=False)

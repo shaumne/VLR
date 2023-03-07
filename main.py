@@ -3,6 +3,7 @@ import json
 from bs4 import BeautifulSoup
 from get_url import main
 import pandas as pd
+from datetime import datetime
 def get_matches(args:str):
 
     url = args
@@ -125,6 +126,14 @@ def get_matches(args:str):
 
     return all_game
 
+def get_time(url:str):
+    dict_ = get_matches(url)
+    rakip1 = dict_.get("1. mac")
+    
+    time = rakip1.get("Kalan Zaman = ")
+    return time
+
+
 # df = pd.read_csv("all_region.csv")
 # url = df.loc[df["team_name"].str.contains("bbl"), "url"].values[0]
-# get_matches(url)
+# get_time(url)
