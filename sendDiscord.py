@@ -96,10 +96,8 @@ async def get_matches1(interaction:discord.Interaction, args:str):
     embed1.add_field(name="Player 5", value=players[4]["Member"], inline=True)
 
 
-
-
-
     await interaction.followup.send(embeds=[embed, embed1])
+
 
 @tree.command(name="maps", description="See the Team's Map Stats")
 async def get_maps(interaction:discord.Interaction, args:str):
@@ -163,4 +161,4 @@ async def get_maps(interaction:discord.Interaction, args:str):
     
     await interaction.followup.send(embeds=[embed, embed2])
 
-client.run("MTA4MTk4NDQwMzAyODMxMjExNA.Ga1eWh.I6GiGNF31Y9pvUyni4vzWorPC1v2bTtREZrs_Q")
+client.run("BOT-TOKEN")

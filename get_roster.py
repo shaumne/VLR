@@ -1,7 +1,6 @@
 import requests
 import json
 from bs4 import BeautifulSoup
-from get_stat_url import get_stat_url
 import pandas as pd
 
 
